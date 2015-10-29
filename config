@@ -1,0 +1,83 @@
+Host ny4
+	User hadoop
+	Port 2022
+	HostName 211.151.97.189
+
+Host ny1
+    Port 2022
+    User hadoop
+    HostName 192.168.12.13
+    ProxyCommand ssh -p2022 hadoop@211.151.97.189 exec nc   %h %p
+
+Host ny2
+    Port 2022
+    User hadoop
+    HostName 192.168.12.14
+    ProxyCommand ssh -p2022 hadoop@211.151.97.189 exec nc   %h %p
+Host ny3
+    Port 2022
+    User hadoop
+    HostName 192.168.12.15
+    ProxyCommand ssh -p2022 hadoop@211.151.97.189 exec nc   %h %p
+
+Host ny5
+    Port 2022
+    User hadoop
+    HostName 192.168.12.33
+    ProxyCommand ssh -p2022 hadoop@211.151.97.189 exec nc   %h %p
+Host ny6
+    Port 2022
+    User hadoop
+    HostName 192.168.12.47
+    ProxyCommand ssh -p2022 hadoop@211.151.97.189 exec nc   %h %p
+Host ny7
+    Port 2022
+    User hadoop
+    HostName 192.168.12.48
+    ProxyCommand ssh -p2022 hadoop@211.151.97.189 exec nc   %h %p
+Host ny8
+    Port 2022
+    User hadoop
+    HostName 192.168.12.46
+    ProxyCommand ssh -p2022 hadoop@211.151.97.189 exec nc   %h %p
+
+Host hn4
+    Port 22
+    User tiger
+    HostName 192.168.12.250
+    ProxyCommand ssh -p2022 hadoop@211.151.97.189 exec nc   %h %p
+Host hn3
+    Port 22
+    User tiger
+    HostName 192.168.12.251
+    ProxyCommand ssh -p2022 hadoop@211.151.97.189 exec nc   %h %p
+Host hn2
+    Port 22
+    User tiger
+    HostName 192.168.12.252
+    ProxyCommand ssh -p2022 hadoop@211.151.97.189 exec nc   %h %p
+Host template
+    Port 22
+    User tiger
+    HostName 192.168.12.253
+    ProxyCommand ssh -p2022 hadoop@211.151.97.189 exec nc   %h %p
+
+
+
+Host sharapova
+    User root
+    HostName 192.168.12.247
+    ProxyCommand ssh -p2022 hadoop@211.151.97.189 exec nc %h %p
+    Port 22
+
+Host teahee
+    User root
+    HostName 192.168.12.248
+    ProxyCommand ssh -p2022 hadoop@211.151.97.189 exec nc %h %p
+    Port 22
+
+Host julie
+    User root
+    HostName 192.168.12.249
+    ProxyCommand ssh -p2022 hadoop@211.151.97.189 exec nc %h %p
+    Port 22
